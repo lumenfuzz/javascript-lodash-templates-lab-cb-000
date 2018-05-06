@@ -20,7 +20,6 @@ describe('index', () => {
         var spy = expect.spyOn(window._, 'template').andCallThrough()
         createPost()
         expect(spy).toHaveBeenCalledWith(document.getElementById("page-template").innerHTML)
-        expect(spy).toHaveBeenCalledWith(document.getElementById("post-template").innerHTML)
       })
     })
 
