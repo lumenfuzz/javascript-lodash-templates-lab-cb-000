@@ -15,10 +15,10 @@ function createPost() {
   var thePostDiv = document.getElementById("the_post");
 
   //execute template function with JSON object for the interpolated values
-  var templateHTML = templateFn({ 'title': postTitle, 'body': postBody, 'author': postAuthor });
+  var postTemplateHTML = postTemplateFn({ 'title': postTitle, 'body': postBody, 'author': postAuthor });
 
   //append rather than replace!
-  thePostDiv.innerHTML += templateHTML;
+  thePostDiv.innerHTML += postTemplateHTML;
 }
 
 function postComment() {
