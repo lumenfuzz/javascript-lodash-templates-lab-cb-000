@@ -5,9 +5,14 @@
   </head>
   <body>
     <main>
+      <form id="post-form" onsubmit="createPost()">
+        Title: <input type="text" id="postTitle"><br>
+        Body: <input type="textarea" id="postBody"><br>
+        Author: <input type="text" id="postAuthor"><br>
+        <input type="submit">
+        <div id="the_post"></div>
+      </form>
     </main>
-    <form id="post-form" onsubmit="createPost()">
-    </form>
     <script src="node_modules/lodash/lodash.min.js"></script>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
