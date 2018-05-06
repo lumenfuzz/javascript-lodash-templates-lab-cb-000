@@ -7,5 +7,7 @@ function createPost() {
 }
 
 function postComment() {
+  var commentTemplate = document.getElementById("comment-template").innerHTML;
 
+  var commentTemplateFn = _.template(commentTemplate);
 }
