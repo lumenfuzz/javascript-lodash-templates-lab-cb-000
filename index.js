@@ -22,7 +22,20 @@ function createPost() {
 }
 
 function postComment() {
-  var commentTemplate = document.getElementById("comment-template").innerHTML;
+  var commenter = document.getElementById("commenterName").value;
+  var comment = document.getElementById("commentText").value;
 
-  var commentTemplateFn = _.template(commentTemplate);
+  //create template string
+  var commentTemplate = document.getElementById("comment-template").innerHTML;
+  //create template function
+  var templateFn = _.template(commentTemplate);
+
+  //get HTMLspace for comments
+  var commentsDiv = document.getElementById("comments");
+
+  //execute template function with JSON object for the interpolated values
+  var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
+
+  //append rather than replace!
+  commentsDiv.innerHTML += templateHTML;
 }
