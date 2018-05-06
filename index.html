@@ -34,17 +34,19 @@
     </article>
     </script>
     <script id="comments-template" type="text/x-lodash-template">
+      <div id="comments">
+      </div>
+    </script>
+    <script id="comment-template" type="text/x-lodash-template">
       <div class="comment">
         <div class="comment-body"><%- comment %></div>
         <div class="commenter">
           <p>
-            <span class="posted-by">Posted By: </span>
+            <footer class="posted-by">Posted By: </footer>
             <%- commenter %>
           </p>
         </div>
       </div>
-    </script>
-    <script id="comment-template" type="text/x-lodash-template">
     </script>
   </body>
 </html>
